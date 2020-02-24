@@ -1,0 +1,27 @@
+body {
+    background: url('../images/background.jpg');
+    color:white;
+}
+header {
+    font-size: 40px;
+    font-family:'Pacifico', serif;
+    color: 8D63AB ;
+    font-weight: bold;
+    text-align: center;
+}
+.container {
+    margin-top: 50px;
+   align-items: center;
+    display: flex; 
+    justify-content: center;
+    background-color: rgb(232, 165, 235);
+    height: 440px;
+    width: 620px;
+ font-family: 'Pacifico',serif;
+ text-align: center;
+}
+
+#reset {
+    visibility: visible;
+}
+
