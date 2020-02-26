@@ -14,14 +14,34 @@ header {
    align-items: center;
     display: flex; 
     justify-content: center;
-    background-color: rgb(232, 165, 235);
+    background-color: rgba(195, 155, 197, 0.808);
     height: 440px;
     width: 620px;
  font-family: 'Pacifico',serif;
  text-align: center;
 }
 
-#reset {
-    visibility: visible;
+.btn-primary {
+    background-color: lavender;
+    color: white;
+    font-family: 'Pacifico', serif;
+    font-size: 35px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+
+
+#message, #endingmessage {
+    font-family: 'Pacifico', serif;
+}
+.thisChoice:hover {
+    background-color: turquoise;
+    color: white;
+    padding:  10px;
+}
+
+#gif {
+    margin:30px;
 }
 
