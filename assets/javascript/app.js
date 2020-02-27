@@ -61,17 +61,20 @@ var messages = {
  endTime: "Out of time!",
   done: "Let's see how well you did!"
  }
+ 
 
 //start button 
 $("#startBtn").on ('click', function(){
     $(this).hide();
     startGame();
+    
 })
     
   // start over button   
   $("#startoverBtn").on ('click', function(){
     $(this).hide();
     startGame();
+    backgroundSound.play();
 })
 
 function startGame (){
@@ -83,7 +86,14 @@ function startGame (){
     wrongCount=0;
     unansweredCount=0;
     newQuestion();
-    
+    var backgroundSound=document.createElement("audio");
+    backgroundSound.setAttribute("src","assets/sound/early-sunrise.mp3");
+    backgroundSound.play();
+    backgroundSound.loop=true;
+    //var correctSound= document.createElement("audio");
+    //var incorrectSound= document.createElement("audio");
+    //correctSound.setAttribute("src", "assets/sound/chimes-glassy.mp3");
+    //incorrectSound.setAttribute("src","assets/sound/glitch-in-the-matrix.mp3");
 
 };
 
@@ -152,12 +162,14 @@ $("#gif").html('<img src="assets/images/' + gifArray[currentQuestion] + '.gif" w
         if (selectanswer === answerListindex && (answered === true) ){
             $('#message').html(messages.correct);
             correctCount++;
+            //correctSound.play();
             $('#correctanswer').html('<p> Right answers: ' + correctCount + '</p>');
         }
         else if (selectanswer != answerListindex && (answered === true) )
     {
         $("#message").html(messages.incorrect);
         wrongCount++;
+        //incorrectSound.play();
         $('#wronganswer').html('<p> Wrong answers: ' + wrongCount + '</p>');
     }
 
